@@ -3,7 +3,7 @@
 var bio = {
 	"name": "Ritchie Diaper",
 	"role": "Software Engineer",
-	"welcomeMessage": "Howdie dudes!",
+	"welcomeMessage": "IT Professional for over 20 years",
 	"contacts": {
 		"mobile": "555 1234",
 		"email": "myemail@address.com",
@@ -74,6 +74,7 @@ bio.display = function() {
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
 	}
+
 	bio.skills.forEach(function(skill) {
 		var formattedSkill = HTMLskills.replace("%data%", skill);
 		$("#skills").append(formattedSkill);
@@ -136,7 +137,7 @@ var projects = {
 		"title": "Tivoli deployment at BAA",
 		"dates": "1997-1999",
 		"description": "Large deployment of Tivoli software throughout a number of airports in the UK",
-		"images": []
+		"images": ["http://placehold.it/300x200", "http://placehold.it/400x200"]
 	}]
 };
 
