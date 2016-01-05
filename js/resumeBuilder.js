@@ -124,3 +124,32 @@ work.display = function() {
 }
 
 work.display();
+
+// Projects undertaken
+
+var projects = {
+	"projects":[{
+		"title": "Tivoli deployment at BAA",
+		"dates": "1997-1999",
+		"description": "Large deployment of Tivoli software throughout a number of airports in the UK",
+		"images": []
+	}]
+};
+
+projects.display = function() {
+	projects.projects.forEach(function(project) {
+		$("#projects").append(HTMLprojectStart);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+		$(".project-entry:last").append(formattedTitle);
+		var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+		$(".project-entry:last").append(formattedDates);
+		var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
+		$(".project-entry:last").append(formattedDescription);
+		project.images.forEach(function(image) {
+			var formattedImage = HTMLprojectImage.replace("%data%", image);
+			$(".project-entry:last").append(formattedImage);
+		});
+	});
+}
+
+projects.display();
