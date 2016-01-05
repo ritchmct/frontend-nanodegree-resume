@@ -212,3 +212,8 @@ span {
     display: block;
   }
 }
+
+#info-window-content {
+  color: #1199c3;
+  font-weight: 700;
+}

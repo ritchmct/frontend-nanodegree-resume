@@ -32,21 +32,25 @@ bio.display = function() {
 		if (bio.contacts.mobile != "") {
 			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 			$("#topContacts").append(formattedMobile);
+			$("#footerContacts").append(formattedMobile);
 		}
 
 		if (bio.contacts.email != "") {
 			var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 			$("#topContacts").append(formattedEmail);
+			$("#footerContacts").append(formattedEmail);
 		}
 
 		if (bio.contacts.twitter != "") {
 			var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 			$("#topContacts").append(formattedTwitter);
+			$("#footerContacts").append(formattedTwitter);
 		}
 
 		if (bio.contacts.github != "") {
 			var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 			$("#topContacts").append(formattedGithub);
+			$("#footerContacts").append(formattedGithub);
 		}
 
 		if (bio.contacts.location != "") {
