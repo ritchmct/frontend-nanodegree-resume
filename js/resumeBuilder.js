@@ -137,7 +137,7 @@ var projects = {
 		"title": "Tivoli deployment at BAA",
 		"dates": "1997-1999",
 		"description": "Large deployment of Tivoli software throughout a number of airports in the UK",
-		"images": ["http://placehold.it/300x200", "http://placehold.it/400x200"]
+		"images": ["images/Drawers-small-400.jpg", "images/Sill-small-400.jpg"]
 	}]
 };
 
