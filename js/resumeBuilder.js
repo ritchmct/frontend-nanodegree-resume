@@ -153,3 +153,35 @@ projects.display = function() {
 }
 
 projects.display();
+
+// Education
+
+var education = {
+	"schools":[{
+		"name": "Heriot Watt University",
+		"location": "Edinburgh, UK",
+		"degree": "BSc",
+		"majors": ["Electrical Engineering", "Electronic Engineering"],
+		"dates": "1980-1984",
+		"url": "http://www.hw.ac.uk/"
+	}]
+};
+
+education.display = function() {
+	education.schools.forEach(function(school) {
+		$("#education").append(HTMLschoolStart);
+		var formattedName = HTMLschoolName.replace("%data%", school.name);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+		$(".education-entry:last").append(formattedName + formattedDegree);
+		var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+		$(".education-entry:last").append(formattedDates);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
+		$(".education-entry:last").append(formattedLocation);
+		school.majors.forEach(function(major) {
+			var formattedMajor = HTMLschoolMajor.replace("%data%", major);
+			$(".education-entry:last").append(formattedMajor);
+		});
+	});
+}
+
+education.display();
