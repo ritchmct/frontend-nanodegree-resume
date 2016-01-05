@@ -185,3 +185,7 @@ education.display = function() {
 }
 
 education.display();
+
+// Map
+
+$("#mapDiv").append(googleMap);
