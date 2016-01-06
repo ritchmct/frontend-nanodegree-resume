@@ -17,55 +17,55 @@ var bio = {
 
 bio.display = function() {
 
-	if (bio.role != "") {
+	if (bio.role !== "") {
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		$("#header").prepend(formattedRole);
 	}
 
-	if (bio.name != "") {
+	if (bio.name !== "") {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		$("#header").prepend(formattedName);
 	}
 
 	if (bio.contacts) {
 
-		if (bio.contacts.mobile != "") {
+		if (bio.contacts.mobile !== "") {
 			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 			$("#topContacts").append(formattedMobile);
 			$("#footerContacts").append(formattedMobile);
 		}
 
-		if (bio.contacts.email != "") {
+		if (bio.contacts.email !== "") {
 			var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 			$("#topContacts").append(formattedEmail);
 			$("#footerContacts").append(formattedEmail);
 		}
 
-		if (bio.contacts.twitter != "") {
+		if (bio.contacts.twitter !== "") {
 			var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 			$("#topContacts").append(formattedTwitter);
 			$("#footerContacts").append(formattedTwitter);
 		}
 
-		if (bio.contacts.github != "") {
+		if (bio.contacts.github !== "") {
 			var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 			$("#topContacts").append(formattedGithub);
 			$("#footerContacts").append(formattedGithub);
 		}
 
-		if (bio.contacts.location != "") {
+		if (bio.contacts.location !== "") {
 			var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 			$("#topContacts").append(formattedLocation);
 		}
 
 	}
 
-	if (bio.bioPic != "") {
+	if (bio.bioPic !== "") {
 		var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
 		$("#header").append(formattedBiopic);
 	}
 
-	if (bio.welcomeMessage != "") {
+	if (bio.welcomeMessage !== "") {
 		var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 		$("#header").append(formattedWelcomeMsg);
 	}
@@ -79,7 +79,7 @@ bio.display = function() {
 		var formattedSkill = HTMLskills.replace("%data%", skill);
 		$("#skills").append(formattedSkill);
 	});
-}
+};
 
 bio.display();
 
@@ -126,7 +126,7 @@ work.display = function() {
 		var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
 		$(".work-entry:last").append(formattedDescription);
 	});
-}
+};
 
 work.display();
 
@@ -155,7 +155,7 @@ projects.display = function() {
 			$(".project-entry:last").append(formattedImage);
 		});
 	});
-}
+};
 
 projects.display();
 
@@ -187,7 +187,7 @@ education.display = function() {
 			$(".education-entry:last").append(formattedMajor);
 		});
 	});
-}
+};
 
 education.display();
 
