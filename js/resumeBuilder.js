@@ -12,7 +12,7 @@ var bio = {
 		"location": "Edinburgh, UK"
 	},
 	"skills": ["IBM Cloud Orchestrator", "IBM Endpoint Manager", "IBM Configuration Manager", "IBM Business Process Manager"],
-	"bioPic": "images/Me.jpg"
+	"biopic": "images/Me.jpg"
 };
 
 bio.display = function() {
@@ -60,8 +60,8 @@ bio.display = function() {
 
 	}
 
-	if (bio.bioPic !== "") {
-		var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
+	if (bio.biopic !== "") {
+		var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 		$("#header").append(formattedBiopic);
 	}
 
@@ -169,6 +169,12 @@ var education = {
 		"majors": ["Electrical Engineering", "Electronic Engineering"],
 		"dates": "1980-1984",
 		"url": "http://www.hw.ac.uk/"
+	}],
+	"onlineCourses":[{
+		"title": "Front-End Web Developer Nanodegree",
+		"school": "Udacity",
+		"dates":"2015-2016",
+		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	}]
 };
 
@@ -186,6 +192,17 @@ education.display = function() {
 			var formattedMajor = HTMLschoolMajor.replace("%data%", major);
 			$(".education-entry:last").append(formattedMajor);
 		});
+	});
+	$("#education").append(HTMLonlineClasses);
+	education.onlineCourses.forEach(function(course) {
+		$("#education").append(HTMLschoolStart);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
+		$(".education-entry:last").append(formattedTitle + formattedSchool);
+		var formattedDates = HTMLonlineDates.replace("%data%", course.dates);
+		$(".education-entry:last").append(formattedDates);
+		var formattedURL = HTMLonlineURL.replace("%data%", course.url);
+		$(".education-entry:last").append(formattedURL);
 	});
 };
 
